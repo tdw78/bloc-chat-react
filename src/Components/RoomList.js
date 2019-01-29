@@ -1,6 +1,5 @@
 //RoomList
 import React, { Component } from 'react';
-import App from '../App.js';
 
 class RoomList extends Component {
   constructor(props) {
@@ -29,7 +28,7 @@ componentDidMount() {
      const newRoomList = this.roomsRef.push({
        name: this.state.newRoom
      });
-     this.setState({ newRoomList: "" });
+     this.setState({ newRoom: newRoomList, newRoom: "" });
    }
 
   render() {
@@ -38,7 +37,7 @@ componentDidMount() {
         <section className= "rooms">
          {
            this.state.rooms.map( (room, index) =>
-             <div key={index}>{room.name}</div>
+              <div key={index}>{room.name}</div>
          )}
        </section>
        <form onSubmit={ (e) => this.createRoom(e) }>
