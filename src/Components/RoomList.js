@@ -35,6 +35,7 @@ componentDidMount() {
     return(
       <div>
         <section className= "rooms">
+        <h3>Please select a room:</h3>
          {
            this.state.rooms.map( (room, index) =>
               <div key={index}>{room.name}</div>
