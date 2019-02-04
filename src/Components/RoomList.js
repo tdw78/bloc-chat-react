@@ -32,17 +32,22 @@ componentDidMount() {
    }
 
   render() {
+
     return(
       <div>
         <section className= "rooms">
         <h3>Please select a room:</h3>
+        <h3>Current Room: {this.props.activeRoom.name}</h3>
          {
            this.state.rooms.map( (room, index) =>
-              <div key={index}>{room.name}</div>
+              <div key={index} onClick={ (e) => this.props.setActiveRoom(room)} >{room.name}</div>
          )}
        </section>
        <form onSubmit={ (e) => this.createRoom(e) }>
-         <input type="text" value={this.state.newRoom} onChange={ (e) => this.handleChange(e) } />
+         <input type="text"
+           value={this.state.newRoom}
+           onChange={ (e) => this.handleChange(e) }
+         />
          <input type="submit" />
        </form>
      </div>
