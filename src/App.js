@@ -63,6 +63,7 @@ class App extends Component {
             firebase={firebase}
             username={this.state.username}
             setUser={this.setUSer}
+            currentUser={this.state.currentUser}
           />
        </main>
      </div>
