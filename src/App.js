@@ -23,7 +23,7 @@ class App extends Component {
       activeRoom: "",
       activeRoomId: "",
       username: "",
-      currentUser: ""
+      currentUser: "",
     }
   }
 
@@ -48,7 +48,6 @@ class App extends Component {
             firebase={firebase}
             activeRoom={this.state.activeRoom}
             setActiveRoom={this.setActiveRoom}
-            isActiveRoom={this.state.isActiveRoom}
             activeRoomId={this.state.activeRoomId}
             setUser={this.setUser.bind(this)}
           />

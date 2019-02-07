@@ -35,6 +35,13 @@ class MessageList extends Component{
       });
     }
 
+    deleteMessage(clickedMessage) {
+      const newMsgList = this.state.messages.filter( msg => {
+       return msg !== clickedMessage
+     });
+      this.setState({ messages: newMsgList });
+    }
+
    render(){
        const activeList = this.state.messages.filter(message =>
          message.roomId === this.props.activeRoomId
@@ -45,6 +52,7 @@ class MessageList extends Component{
              <li>{message.content}</li>
              <li> User:{this.props.currentUser? this.props.currentUser.displayName : "Guest"}</li>
              <li> Sent:{message.sentAt} </li>
+             <button onClick={ (e) => this.deleteMessage(message)}>Delete</button>
           </div>
           )
 

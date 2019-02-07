@@ -39,13 +39,13 @@ componentDidMount() {
       this.setState({ rooms: newList });
    }
 
-   /*changeName(e){
+   changeName(e){
      this.setState({ newName: e.target.value })
    }
 
    renameRoom(room) {
      return room.name === this.state.newName;
-   }*/
+   }
 
   render() {
     return(
