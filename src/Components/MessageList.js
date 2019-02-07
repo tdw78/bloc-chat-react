@@ -26,7 +26,7 @@ class MessageList extends Component{
   createMessage(message){
       this.messagesRef.push({
         roomId: this.props.activeRoomId,
-        username: this.props.username? this.props.username.displayName : " Guest",
+        user: this.props.currentUser? this.props.currentUser.displayName : "Guest",
         content: this.state.newMessage,
         sentAt: this.props.firebase.database.ServerValue.TIMESTAMP
       });
@@ -43,7 +43,7 @@ class MessageList extends Component{
          const messages = activeList.map( (message, index) =>
            <div key={index}>
              <li>{message.content}</li>
-             <li> UserName:{message.username}</li>
+             <li> User:{this.props.currentUser? this.props.currentUser.displayName : "Guest"}</li>
              <li> Sent:{message.sentAt} </li>
           </div>
           )
@@ -62,7 +62,7 @@ class MessageList extends Component{
              type = "text"
              value = {this.state.newMessage}
              onChange = { (e) => this.handleChange(e) }/>
-             <input type = "submit" />
+             <input type = "submit" value="Type a Message"/>
              </form>
       </div>
     )}

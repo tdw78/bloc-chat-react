@@ -50,19 +50,20 @@ class App extends Component {
             setActiveRoom={this.setActiveRoom}
             isActiveRoom={this.state.isActiveRoom}
             activeRoomId={this.state.activeRoomId}
-            setUser={this.setUSer}
+            setUser={this.setUser.bind(this)}
           />
           <MessageList
             firebase={firebase}
             activeRoom={this.state.activeRoom}
             activeRoomId={this.state.activeRoomId}
             username={this.state.username}
-            setUser={this.setUSer}
+            setUser={this.setUser.bind(this)}
+            currentUser={this.state.currentUser}
           />
           <User
             firebase={firebase}
             username={this.state.username}
-            setUser={this.setUSer}
+            setUser={this.setUser.bind(this)}
             currentUser={this.state.currentUser}
           />
        </main>
