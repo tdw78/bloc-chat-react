@@ -43,7 +43,7 @@ class MessageList extends Component{
          const messages = activeList.map( (message, index) =>
            <div key={index}>
              <li>{message.content}</li>
-             <li> User:{this.props.currentUser? this.props.currentUser.displayName : "Guest"}</li>
+             <li> User:{message.user}</li>
              <li> Sent:{message.sentAt} </li>
           </div>
           )
