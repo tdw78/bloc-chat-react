@@ -32,21 +32,6 @@ componentDidMount() {
      this.setState({ newRoom: newRoomList, newRoom: "" });
    }
 
-   deleteRoom(clickedRoom){
-      const newList = this.state.rooms.filter(rooms => {
-        return rooms !== clickedRoom
-      });
-      this.setState({ rooms: newList });
-   }
-
-   changeName(e){
-     this.setState({ newName: e.target.value })
-   }
-
-   renameRoom(room) {
-     return room.name === this.state.newName;
-   }
-
   render() {
     return(
       <div>
