@@ -32,8 +32,9 @@ class User extends Component{
   render(){
     return(
       <div>
-        <button onClick={ (e) => this.handleSignIn(e) }>Sign-In</button>
-        <button onClick={ (e) => this.handleSignOut(e) }>Sign-Out</button>
+        <br></br>
+        <button style={{color: "#FFEAD0", backgroundColor: "#37505C" }}  onClick={ (e) => this.handleSignIn(e) }>Sign-In</button>
+        <button style={{color: "#FFEAD0", backgroundColor: "#37505C" }} onClick={ (e) => this.handleSignOut(e) }>Sign-Out</button>
         <h3>Active User: {this.props.currentUser? this.props.currentUser.displayName : "Guest" } </h3>
      </div>
     )

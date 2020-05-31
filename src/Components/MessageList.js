@@ -49,10 +49,10 @@ class MessageList extends Component{
 
          const messages = activeList.map( (message, index) =>
            <div key={index}>
-             <li>{message.content}</li>
-             <li> User:{message.user}</li>
-             <li> Sent:{message.sentAt} </li>
-             <button onClick={ (e) => this.deleteMessage(message)}>Delete</button>
+             <div>{message.content}</div>
+             <div> User:{message.user}</div>
+             <div> Sent:{message.sentAt} </div>
+             <button class="btn btn-secondary btn-sm" onClick={ (e) => this.deleteMessage(message)}>Delete</button>
           </div>
           )
 
@@ -70,7 +70,9 @@ class MessageList extends Component{
              type = "text"
              value = {this.state.newMessage}
              onChange = { (e) => this.handleChange(e) }/>
-             <input type = "submit" value="Type a Message"/>
+             <input 
+              style={{color: "#FFEAD0", backgroundColor: "#37505C" }}
+             type = "submit" value="Type a Message"/>
              </form>
       </div>
     )}

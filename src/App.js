@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as firebase from 'firebase';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import RoomList from './Components/RoomList';
 import MessageList from './Components/MessageList';
 import User from './Components/User';
@@ -38,10 +39,21 @@ class App extends Component {
     }
 
   render() {
+    const headerStyles = {
+      color: "#352B3D",
+      fontFamily: "Georgia",
+      fontSize: 120,
+      paddingTop: 4,
+      paddingBottom: 4,
+      paddingRight: 16,
+      paddingLeft: 16,
+      letterSpacing: 2,
+      wordSpacing: 4
+    }
     return (
-      <div className="App">
-        <header>
-          <h1>Welcome to<br /> Bloc Chat</h1>
+      <div className="App" style={{backgroundColor: "#7EBDC2" }}>
+        <header style={headerStyles}>
+          <h1>Welcome to Bloc Chat</h1>
         </header>
         <main>
           <RoomList
@@ -66,6 +78,22 @@ class App extends Component {
             currentUser={this.state.currentUser}
           />
        </main>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
      </div>
     );
   }
